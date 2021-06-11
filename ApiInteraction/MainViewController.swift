@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {
-        navigationController?.pushViewController(SuccessViewController(), animated: true)
+        LoginRequest.post()
     }
 }
 

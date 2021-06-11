@@ -8,6 +8,13 @@
 import Foundation
 import Alamofire
 
-struct LoginRequest {
+struct LoginResponseModel: Codable {
+    let email: String
+    let password: String
+}
 
+struct LoginRequest {
+    static func post() {
+
+    }
 }
