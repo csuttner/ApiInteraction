@@ -9,11 +9,14 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
     }
-
-
+    
+    @IBAction func loginPressed(_ sender: UIButton) {
+        navigationController?.pushViewController(SuccessViewController(), animated: true)
+    }
 }
 
