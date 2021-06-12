@@ -29,7 +29,7 @@ enum LoginError: Error {
 
 struct LoginRequest {
     static func post(loginModel: LoginModel, completion: @escaping (Result<SuccessResponseModel, LoginError>) -> Void) {
-        let baseURLString = "https://games-for-good-demo.herokuapp.com/login"
+        let baseURLString = Secrets.baseURLString
         
         let headers: HTTPHeaders = [
             .contentType("application/json")
